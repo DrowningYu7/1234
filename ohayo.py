@@ -1,17 +1,28 @@
-print("This is my bookstore. Welcome!!")
-import random
-
-choice = input('Enter a choice (DrowningYu777, Fakemaker788):')
-print("The first book is called <<DrowningYu777>>, a greak book which was written by dolores in 2019\nAnd it's very cheap which only cost 1000 dollars per book")
-print("The second book is <<Fakemaker788>>, a famous author Caden published it in 2000. The present price is setted in 40 dollars per book.")
-print("The third book is called <<XiaoMing707>>, it was writen by an actress CiCi. She set the price at 500 dollars.")
-print("The forth book is <<KILL YOURSELF>> which written by Shawn in 2024. 200 dollars per book")
-
-print("Choose the book you want")
-print("1.DrowningYu777\n2.Fakemaker788\n3. ")
-choice = input('Enter a choice (DrowningYu777, Fakemaker788):')
+from AAA import Bookstore
 
 
+while True:
+ 
+    print("Welcome to my bookstore")
+    print("1.Add books\n2.Sell books\n3.Increase the price\n4.Reduce the price\n5.Show all books\n6.Quit")
+
+    choice = input("Enter your choice:")
+    if choice =="1":
+      add = Bookstore.Add_books()
+    elif choice == "2":
+      sell = Bookstore.Sell_books()
+    elif choice == "3":
+      increase_price= Bookstore.Increase_price()
+    elif choice =="4":
+      reduce_price = Bookstore.Reduce_price()
+    elif choice =="5":
+      show = Bookstore.Show_all_books()
+    elif choice =="6":
+      print("Exit the Bookstore")
+    else:
+      print("An invalid choice, please try again")
+      break
 
 
-print("1.Add books\n2.Sell books\n3.Increase the price\n4.Reduce the price")
+
+
