@@ -1,6 +1,5 @@
 from AAA import Bookstore
-
-
+Variable = Bookstore()
 while True:
  
     print("Welcome to my bookstore")
@@ -8,15 +7,15 @@ while True:
 
     choice = input("Enter your choice:")
     if choice =="1":
-      add = Bookstore.Add_books()
+      add = Variable.Add_books()
     elif choice == "2":
-      sell = Bookstore.Sell_books()
+      sell = Variable.Sell_books()
     elif choice == "3":
-      increase_price= Bookstore.Increase_price()
+      increase_price= Variable.Increase_price()
     elif choice =="4":
-      reduce_price = Bookstore.Reduce_price()
+      reduce_price = Variable.Reduce_price()
     elif choice =="5":
-      show = Bookstore.Show_all_books()
+      show = Variable.Show_all_books()
     elif choice =="6":
       print("Exit the Bookstore")
     else:

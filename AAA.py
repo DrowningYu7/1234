@@ -7,10 +7,11 @@ class Bookstore():
        
 
     def Add_books(self):
-        self._Name=input("Enter the name of the book:")
-        self._Author=input("Enter the author of the book:")
-        self._Price=input("Enter the price of the book:")
+        self._Name = input("Enter the name of the book:")
+        self._Author = input("Enter the author of the book:")
+        self._Price = input("Enter the price of the book:")
         self._Books[self._Name] = {self._Author,self._Price}
+        print(self._Books)
             
 
 
@@ -18,5 +19,3 @@ class Bookstore():
         Name=input("Enter the name of the book:")
         Author=input("Enter the author of the book:")
         Price=input("Enter the price of the book:")
-
- 
