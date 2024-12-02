@@ -19,3 +19,4 @@ class Bookstore():
         Name=input("Enter the name of the book:")
         Author=input("Enter the author of the book:")
         Price=input("Enter the price of the book:")
+        
