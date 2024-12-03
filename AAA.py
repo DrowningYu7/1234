@@ -10,13 +10,24 @@ class Bookstore():
         self._Name = input("Enter the name of the book:")
         self._Author = input("Enter the author of the book:")
         self._Price = input("Enter the price of the book:")
-        self._Books[self._Name] = {self._Author,self._Price}
-        print(self._Books)
-            
 
+        self._Books[self._Name] = {self._Author,self._Price}
+        print("\nYou added this book successfully!")
+        print(self._Books)
+        print("\n")
+        
+        
+        
 
     def Sell_books(self):
-        Name=input("Enter the name of the book:")
-        Author=input("Enter the author of the book:")
-        Price=input("Enter the price of the book:")
+        self._Name=input("Enter the name of the book:")
+        self._Author=input("Enter the author of the book:")
+        self._Price=input("Enter the price of the book:")
+
+        if self._Name in self._Books:
+            print(self._Books)
+            print("\nYou sold this book successfully!")
+        else:
+            print("\nSorry.Book not found in the Bookstore.")    
+        print("\n") 
         
