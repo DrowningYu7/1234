@@ -4,6 +4,7 @@ class Bookstore():
         self._Name = "x"
         self._Author = "x"
         self._Price = float(0)
+        self._book_Name ="x"
        
 
     def Add_books(self):
@@ -11,23 +12,35 @@ class Bookstore():
         self._Author = input("Enter the author of the book:")
         self._Price = input("Enter the price of the book:")
 
-        self._Books[self._Name] = {self._Author,self._Price}
+        self._Books[self._Name] = {"Author":self._Author,"Price":self._Price}
         print("\nYou added this book successfully!")
+        print("Now you have these books")
         print(self._Books)
         print("\n")
         
         
-        
-
     def Sell_books(self):
         self._Name=input("Enter the name of the book:")
         
 
         if self._Name in self._Books:
             print(self._Books)
-            del self.Books[variable]
+            del self._Books[self._Name]
             print("\nYou sold this book successfully!")
         else:
-            print("\nSorry.Book not found in the Bookstore.")    
-        print("\n") 
+            print("\nSorry TvT Book not found in the Bookstore.")    
+        print("Now you have these books")
+        print(self._Books)
+        print("\n")
         
+
+    def Show_all_books(self):
+        for s in self._Books:
+            print(s,self._Books[s]["Author"])
+            print(self._Books[s]["Price"])
+            print("\n")
+            
+    def Increase_price(self):
+        self._book_Name = input("Enter the name of the book that you want to increase the price:")
+        if self._book_Name in self._Books:
+            print 
