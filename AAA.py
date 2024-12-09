@@ -49,6 +49,12 @@ class Bookstore():
 
     def Save_books_to_file(self, filename="booklist.txt"):
          with open(filename, "w") as file:
-             for name, info in self._Books.items():
-                    file.write(f"Book: {name}, Author: {info['Author']}, Price: ${info['Price']:.2f}\n")
-             print(f"\nBooks have been saved to {filename} successfully!\n")
+            count = 1
+            for name, info in self._Books.items():
+                file.write(f"{count}\n")
+                file.write(f"{name}\n")
+                file.write(f"{info['Author']}\n")
+                file.write(f"{info['Price']}\n")
+                file.write("\n")
+                count += 1
+         print(f"\nBooks have been saved to {filename} successfully!\n")
