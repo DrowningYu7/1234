@@ -1,4 +1,0 @@
-Book: kopp, Author: ww, Price: $11222.00
-Book: lplpl, Author: wdwdwd, Price: $3434.00
-Book: ccccccccc, Author: wwwwww, Price: $2222222.00
-Book: wdwdwdwdwdw, Author: fffffffff, Price: $3333333333.00
