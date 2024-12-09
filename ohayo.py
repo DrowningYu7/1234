@@ -19,7 +19,8 @@ while True:
     elif choice =="6":
       save = Variable.Save_books_to_file()
     elif choice =="7":
-      print("Exit the Bookstore")
+      print("\nExit the Bookstore")
+      break
     else:
       print("An invalid choice, please try again")
       break
