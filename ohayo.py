@@ -3,7 +3,7 @@ Variable = Bookstore()
 while True:
  
     print("Welcome to my bookstore")
-    print("1.Add books\n2.Sell books\n3.Increase the price\n4.Reduce the price\n5.Show all books\n6.Save books to the file\n7.Quit\n")
+    print("1.Add books\n2.Sell books\n3.Increase the price\n4.Reduce the price\n5.Show all books\n6.Save books to the file\n7.Load books from the file\n8.Quit\n")
 
     choice = input("Enter your choice:")
     if choice =="1":
@@ -19,6 +19,9 @@ while True:
     elif choice =="6":
       save = Variable.Save_books_to_file()
     elif choice =="7":
+      load = Variable.Load_books_from_file()
+      break
+    elif choice =="8":
       print("\nExit the Bookstore")
       break
     else:

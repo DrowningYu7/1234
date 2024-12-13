@@ -5,6 +5,7 @@ class Bookstore():
         self._Author = "x"
         self._Price = float(0)
         self._book_Name ="x"
+        
        
 
     def Add_books(self):
@@ -38,7 +39,7 @@ class Bookstore():
         #     print(self._Books[s]["Price"])
         #     print("\n")
         for s in self._Books:
-            print(f"Book: {s}, Author: {self._Books[s]['Author']}, Price: ${self._Books[s]['Price']:.2f}")
+            print(f"Book: {s}\nAuthor: {self._Books[s]['Author']}\nPrice: ${self._Books[s]['Price']:.2f}")
             print("\n")
             
     def Increase_price(self):
@@ -55,7 +56,35 @@ class Bookstore():
                 file.write(f"{name}\n")
                 file.write(f"{info['Author']}\n")
                 file.write(f"{info['Price']}\n")
-                file.write("\n")
                 count += 1
          print(f"\nBooks have been saved to {filename} successfully!\n")
 
+    def Load_books_from_file(self, filename="booklist.txt"):
+        
+            with open(filename,"r") as file:
+                self._Books = {}    
+                self.book_number = 1
+                
+                while True:    
+                    countlines= file.readline().strip()
+                    self.book_number += 1
+                    if not countlines:
+                        break
+                    self._Name = file.readline().strip()
+                    self._Author= file.readline().strip()
+                    self._Price= file.readline().strip()
+                    if self._Name and self._Author and self._Price:
+                        self._Books[countlines]= {"Name":self._Name,"Author":self._Author,"Price":self._Price}
+                        
+                    else:
+                        print("\nThere's an error. This file is incorrect.") 
+                    continue
+            print("Books have already loaded successfully!")
+              # for W in self._Books:
+        #     print(self._Books[s]["Author"])
+        #     print(self._Books[s]["Price"])
+        #     print("\n")
+            for W, book in self._Books.items():
+                print(f"{W}\n{book['Name']}\n{book['Author']}\n{book['Price']}\n")
+       
+        
